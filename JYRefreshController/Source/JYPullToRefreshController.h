@@ -45,6 +45,8 @@ typedef NS_ENUM(NSUInteger, JYRefreshDirection)
  */
 @property (nonatomic, assign) BOOL attachedEdge;
 
+@property (nonatomic, assign) BOOL fixMainTabRefreshBug;  // 刷新bug修复
+
 - (instancetype)initWithScrollView:(UIScrollView *)scrollView;
 
 /**

@@ -138,6 +138,13 @@
   if (!self.enable || self.refreshState == JYRefreshStateStop) {
     return;
   }
+    
+  if (self.fixMainTabRefreshBug) {
+    if (self.refreshState != JYRefreshStateLoading) {
+      return;
+    }
+  }
+    
   self.refreshState = JYRefreshStateStop;
   UIEdgeInsets contentInset = [self adjustedContentInset];
   
